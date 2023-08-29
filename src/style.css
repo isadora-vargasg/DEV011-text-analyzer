@@ -1,0 +1,56 @@
+html {
+    background-color: whitesmoke;
+  }
+
+header > h1 {
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    margin-bottom: 0;
+    color: black;  
+}
+
+body {
+  width: 1000px;
+  margin: 0 auto;
+  background-color: #5a83ac;
+  padding: 0 20px 20px 20px;
+  border: 3px solid black;
+}
+
+ul {
+  font-size: 20px;
+  list-style-position:inside
+}
+textarea {
+  padding: 10px;
+  height: 10em;
+  width: 500px;
+  max-width: 100%;
+  line-height: 1.5;
+  border-radius: 5px;
+  border: 1px solid black;
+  box-shadow: 1px 1px 1px #999;
+}
+
+button 
+  input {
+    font-family: inherit;
+    font-size: 100%;
+    background: #FFFFFF;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 0.5rem 1rem;
+    transition: 500ms;
+  }
+
+
+footer > p {
+  font-size: 20px;
+  text-align: right;
+  font-family: 'Roboto Slab', serif;
+  margin-bottom: 0;
+  color: black; 
+}
+
