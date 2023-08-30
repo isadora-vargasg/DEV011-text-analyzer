@@ -40,4 +40,9 @@ textarea.addEventListener("keyup", (event) => {
   // analyzer.getAverageWordLength()
 });
 
+let resetButton = document.getElementById('reset-button');
+resetButton.addEventListener('click', _=>{
+    location.reload();
+})
+
 //TODO: escuchar eventos del DOM e invocar  los métodos del objeto `analyzer`

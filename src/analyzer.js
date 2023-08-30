@@ -24,7 +24,7 @@ const analyzer = {
       return 0;
     }
     const promedio = caracteresTotales / palabrasTotales.length;
-    return promedio.toFixed(3);
+    return promedio.toFixed(2);
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberCount: (text) => {
@@ -41,9 +41,8 @@ const analyzer = {
         sumatoria += parseFloat(numerosEncontrados[i]);
       }
     }
-    return sumatoria.toFixed(3);
+    return sumatoria.toFixed(2);
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   },
 };
-
 export default analyzer;
