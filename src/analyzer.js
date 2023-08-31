@@ -1,4 +1,4 @@
-const analyzer = {  
+const analyzer = {
   getWordCount: (text) => {
     const palabras = text.split(" ");
     const palabrasNoEspacio = palabras.filter(function(palabra){
@@ -24,25 +24,31 @@ const analyzer = {
       return 0;
     }
     const promedio = caracteresTotales / palabrasTotales.length;
-    return promedio.toFixed(2);
+    return parseFloat(promedio.toFixed(2));
     //TODO: esta función debe retornar la longitud media de palabras que se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberCount: (text) => {
-    const numerosEncontrados = text.match(/-?\d+(\.\d+)?/g);
+    const filteredText = text.split(" ").filter((word) => !word.match(/[a-zA-Z]/));
+    const textoNumeros = filteredText.join(' '); 
+    const numerosEncontrados = textoNumeros.match(/-?\d+(\.\d+)?/g);
     const contNumeros = numerosEncontrados ? numerosEncontrados.length : 0;
     return contNumeros;
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
   },
   getNumberSum: (text) => {
-    const numerosEncontrados = text.match(/-?\d+(\.\d+)?/g); //buscar todos los números en el texto, incluyendo números enteros y decimales
+    const filteredText = text.split(" ").filter((word) => !word.match(/[a-zA-Z]/));
+    const textoNumeros = filteredText.join(' '); 
+    const numerosEncontrados = textoNumeros.match(/-?\d+(\.\d+)?/g); //buscar todos los números en el texto, incluyendo números enteros y decimales
     let sumatoria = 0;
     if (numerosEncontrados) {
       for (let i = 0; i < numerosEncontrados.length; i++) {
         sumatoria += parseFloat(numerosEncontrados[i]);
       }
     }
-    if (sumatoria <= 0) return 0;
-    return sumatoria.toFixed(2);
+    if (sumatoria !== Math.floor(sumatoria)) {
+      return parseFloat(sumatoria.toFixed(1));
+    }
+    return parseInt(sumatoria);
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   },
 };
