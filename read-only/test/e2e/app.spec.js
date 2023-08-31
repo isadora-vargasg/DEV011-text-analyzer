@@ -11,6 +11,7 @@ test.describe('Para un texto con sólo palábras:', () => {
   test.beforeEach(async ({ page }) => {
     await page.goto('http://localhost:3000/');
     const textarea = await page.locator('textarea[name="user-input"]');
+    console.log("hola ", textarea);
     await textarea.click();
     await textarea.type(TEST_TEXT_NO_NUMBERS);
   });

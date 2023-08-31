@@ -41,6 +41,7 @@ const analyzer = {
         sumatoria += parseFloat(numerosEncontrados[i]);
       }
     }
+    if (sumatoria <= 0) return 0;
     return sumatoria.toFixed(2);
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
   },
