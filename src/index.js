@@ -35,7 +35,7 @@ textarea.addEventListener("keyup", (event) => {
   for (let i = 0; i < 6; i++) {
     console.log('res ', listItems[i].innerText.split(":")[0])
     // listItems[i].innerText =  listItems[i].innerText.split(":")[0] + resultados[i];
-    listItems[i].innerText =  resultados[i].text + resultados[i].result;
+    listItems[i].innerHTML =  resultados[i].text + resultados[i].result;
   }
   // analyzer.getAverageWordLength()
 });
